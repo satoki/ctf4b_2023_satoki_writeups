@@ -11,6 +11,7 @@ polyglotってなに？ たぶんpolyglotを作れるエディタを開発した
 ## 作問にあたって
 [Ricerca CTF 2023](https://2023.ctf.ricsec.co.jp/)のps converterのpolyglotを試みていた時に思いつきました。  
 サンプルファイルなどもあり、beginner向けになっていると思います。  
+あと、毎年の飯テロ問題です。  
 
 ## 解法
 接続すると以下のような、Polyglot Editorなる謎サービスが動いている。  
