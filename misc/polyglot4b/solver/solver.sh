@@ -1,0 +1,1 @@
+echo -e '#!JPEGPNGGIFASCII\nQUIT' | nc polyglot4b.beginners.seccon.games 31416
