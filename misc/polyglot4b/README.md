@@ -82,7 +82,7 @@ if all(types.values()):
 else:
     print("FLAG: No! File mashimashi!!")
 ```
-入力を予測不可能な名前のファイルとして保存し、`file -bkr`の結果に特定の文字列が含まれているかでファイルの種類を決定している。  
+入力を予測不可能な名前のファイルとして保存し、`file -bkr`の結果に特定の文字列が含まれているかどうかでファイルの種類を決定している。  
 JPG、PNG、GIF、TXTのすべてである場合にフラグが得られるようだ。  
 試しに以下のようにGIFのマジックナンバーを送信してみる。  
 ```bash
@@ -108,13 +108,13 @@ GIF image data, version 87a,
 - , ASCII text
 ```
 ただし、JPG、PNG、GIF、TXTのすべてとなる出力を得ることは難しい。  
-ここでfileコマンドにファイルのどこかの中身を出力させる手法を思いつく。  
+ここでfileコマンドにファイルの中身のどこかを出力させる手法を思いつく。  
 例えば以下のようなshebangなどだ。  
 ```bash
 $ echo '#!satoki' | file -bkr -
 a satoki script, ASCII text executable
 ```
-このようにファイルの中身に`JPEGPNGGIFASCII`のような文字列を含ませれば`in`による比較なので判定結果はTrueとなる。  
+このようにファイルの中身に`JPEGPNGGIFASCII`のような文字列を含ませれば`in`による評価なので結果はTrueとなる。  
 shebangを用いるか、sampleのsushi.jpgのimagedescriptionに`CTF4B`なる文字列があり、fileコマンドで出力されるとわかるので、こちらを編集してもよい。  
 以下のように行う(Windowsを使用している場合はプロパティからGUIで変更できる)。  
 ```bash

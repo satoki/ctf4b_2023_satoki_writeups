@@ -1,0 +1,1 @@
+python3 -c 'print("PMEMOBJ"+"K"*4089+"JPEG\nPNG\nGIF\nPDF\nELF\nASCII\nQUIT")' | nc polyglot4b2.beginners.seccon.games 31417
